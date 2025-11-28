@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
 const colors = {
   color1: "#5C2D2D",
@@ -11,11 +11,8 @@ const colors = {
   light3: "#E4E6EB",
 };
 
-const config: Config = {
-  content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+export default {
+  content: ["./*.html", "./src/**/*.{js,ts,jsx,tsx}", "./*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -29,4 +26,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
